@@ -8,6 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let transactions = JSON.parse(localStorage.getItem("transactions")) || [];
 
+  function showTransactionMessage() {
+    const message = document.getElementById("transaction-message");
+    message.classList.add("show");
+
+    setTimeout(() => {
+        message.classList.remove("show");
+    }, 2000); // Cache le message après 2 secondes
+  }
+
   function saveTransaction(target, value, category) {
     const transaction = { 
       id: Date.now(), 
@@ -18,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     transactions.push(transaction);
     localStorage.setItem("transactions", JSON.stringify(transactions));
+
+
   }
 
   function getCurrentMonthTransactions() {
@@ -76,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }]
         }
     });
-}
+  }
 
 
   window.deleteTransaction = function(id) {
@@ -90,6 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       if (expenseTarget.value && amount.value && category.value) {
         saveTransaction(expenseTarget.value, amount.value, category.value);
+        // Afficher la notification
+        showTransactionMessage();
         expenseTarget.value = "";
         amount.value = "";
       }
