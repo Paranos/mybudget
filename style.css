@@ -1,0 +1,115 @@
+/* 🌍 Style général */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5; /* Fond gris clair */
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🏠 Conteneur principal */
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* 📝 Style du formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 📋 Labels */
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* ✏️ Champs de formulaire */
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* ✅ Bouton principal */
+button {
+  background-color: #4A90E2;  /* Bleu sobre */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ABD; /* Bleu foncé */
+}
+
+/* 🗑️ Bouton supprimer */
+button.delete {
+  background-color: #e74c3c; /* Rouge */
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+button.delete:hover {
+  background-color: #c0392b;
+}
+
+/* 📜 Liste des transactions */
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* 📂 Chaque élément de l'historique */
+li {
+  background: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 📊 Style du graphique */
+canvas {
+  max-width: 100%;
+  width: 400px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+/* 🔗 Lien vers la page d'ajout de dépense */
+a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: #4A90E2;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+a:hover {
+  background-color: #357ABD;
+}
